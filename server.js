@@ -25,11 +25,6 @@ app.get('/', (req, res) => {
   res.json({ message: 'Healthcare Backend API is running!' });
 });
 
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ message: 'Something went wrong!' });
-});
-
 const PORT = 5001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

@@ -24,7 +24,7 @@ const mappingSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Prevent duplicate mappings
+// Preventing duplicate mappings
 mappingSchema.index({ patient: 1, doctor: 1 }, { unique: true });
 
 module.exports = mongoose.model('Mapping', mappingSchema);
